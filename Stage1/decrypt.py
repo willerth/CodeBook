@@ -31,6 +31,8 @@ file = open('Stage1/encrypted.txt', encoding='utf8')
 message = file.read()
 file.close
 
+file = open('Stage1/decrypted.txt', 'w', encoding = 'utf8')
+
 for char in message:
-    if char in dict.keys(): print(dict[char], end="")
-    else: print(char, end="")
+    if char in dict.keys(): file.write(dict[char])
+    else: file.write(char)

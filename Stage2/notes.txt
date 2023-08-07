@@ -1,0 +1,14 @@
+19
+FABER EST SUAE QUISQUE FORTUNAE APPIUS CLAUDIUS CAECUS
+
+DICTUM ARCANUM EST NEUTRON
+
+
+
+
+It was known that this was a Caesar cypher, so I just brute-forced it by essentially
+creating 25 possible cypher alphabets and deciphering the message according to each
+alphabet. The only message that looked like anything other than gibberish, which was
+the result of shifting the alphabet 19 places to the right, or 7 to the left(so that
+H, the eighth letter of the alphabet, gets mapped to A, the first)
+

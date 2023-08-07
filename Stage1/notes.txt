@@ -1,0 +1,3 @@
+Very straightforward routine - quickly identified the words "the" and "and", and the six contained letters
+made it easy to identify other words. Each revealed letter allowed me to uncover more letters, which in
+turn allowed me to uncover more letters, and on and on. Whole thing can't have taken me > 30 minutes
