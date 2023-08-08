@@ -1,0 +1,42 @@
+BACKGROUND INFO
+A vigenere cipher is a polyalphabetic cipher that works by cycling through a fixed set of caesar alphabets. The first letter
+of the message is decrypted according to the first alphabet, the second letter is decrypted according to the second alphabet,
+etc. These alphabets can be described by a keyword - for example, if the keyword is CIPHER, the first alphabet is the one that
+maps A to C, the second maps A to I, the third maps A to P, etc. In this case, since the keyword is of length six, the first,
+seventh, thirteenth, ..... letters each get encrypted by the first alphabet. In general, the i'th letter gets decrypted
+according to the (i % n)'th alphabet, where n is the length of the keyword.
+
+
+The Vigenere cipher was first cracked by Charles Babbage. In a vigenere-encrypted message, it may occur that the same word appears
+multiples times in the plaintext message in such a way that they're encrypted according to the same sequence of cipher alphabets.
+This will occur when they keyword has been cycled through an integral number of times, i.e. there are mn characters between the
+start of two occurences of the same word, where n is the length of the keyword and m is any arbitrary integer. Our first step of
+deciphering the message is to determine the possible length of the keyword. We can then divide the ciphertext into n groups - the
+first group will have all characters whose position iscongruent to 1 mod n, the second group will have all characters whose position
+is congruent to 2 mod n, etc. We then decipher each group using tools we've used before, including frequency analysis or (if I'm feeling
+very lazy) brute force
+
+
+08.08.2023
+Singh's website claimed that Stage 4 may be easier than stage 3, so I decided to proceed with at least setting up for stage 4
+before finishing stage 3.
+
+I wrote util.py to find repeated patterns in the decrypted code. The longest repeating patterns were of length 7 - WXIZAYG
+and NEOCZGM, each of which occured twice.
+
+util.txt tracks the frequency and positions of each repeated string of length 7,6,5, and 4. Any smaller repeated pattern could
+easily be a coincidence. The code takes care not to double-count patterns (e.g. since we're tracking WXIZAYG, we don't need to
+track WXIZAY)
+
+util.txt also tracks the number of characters between the start of one occurence of a pattern and the next occurence. Each documented
+number of characters has 5, and only 5, as a common factor.
+
+
+Although I don't want to track patterns that are short, I've changed util.py to find patterns of length 3, of which there are several.
+Interestingly, WUU and EEK are the only ones that show up 3 times (I'd expect several short patterns to show up at least 3 times just
+by coincidence). I'm going to assume that they encode 'les', 'des', or 'une', the french articles of length 3
+
+Setup's done, and now what's left is the act of decoding. I'll start by breaking the ciphertext up into 5 subciphers and see where
+frequency analysis leads me
+
+Breaking the message up into 5 submessages was easily done with split.py

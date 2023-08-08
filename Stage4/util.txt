@@ -1,0 +1,65 @@
+WXIZAYG occurs 2 times, with positions:
+	105
+	295
+There are 190 characters between the start of the first and second occurrence.
+
+------
+
+NUOCZGM occurs 2 times, with positions:
+	176
+	256
+There are 80 characters between the start of the first and second occurrence.
+
+------
+
+DOEOY occurs 2 times, with positions:
+	263
+	308
+There are 45 characters between the start of the first and second occurrence.
+
+------
+
+EFVJ occurs 2 times, with positions:
+	4
+	224
+There are 220 characters between the start of the first and second occurrence.
+
+------
+
+EKQH occurs 2 times, with positions:
+	154
+	374
+There are 220 characters between the start of the first and second occurrence.
+
+------
+
+EEDC occurs 2 times, with positions:
+	193
+	493
+There are 300 characters between the start of the first and second occurrence.
+
+------
+
+IDGM occurs 3 times, with positions:
+	349
+	514
+	574
+There are 165 characters between the start of the first and second occurrence.
+There are 60 characters between the start of the second and third occurrence.
+
+------
+
+FTWG occurs 2 times, with positions:
+	438
+	483
+There are 45 characters between the start of the first and second occurrence.
+
+------
+
+WGMU occurs 2 times, with positions:
+	440
+	560
+There are 120 characters between the start of the first and second occurrence.
+
+------
+
