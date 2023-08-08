@@ -1,0 +1,33 @@
+08.07.2023
+Stage 3 is a homophonic cipher, as described on page 52 of Singh's book
+
+Wrote util.py to create a set of tables and write them to the file util.txt
+These tables document the frequency of each combination of characters that
+appears in the cipher.
+
+The book explicitly made mention of the behavior of the letter "q" in the english
+language. "q" is only ever followed by "u", and both of these letters occur rarely
+within most english passages. so, if I can find these two letters, I may be able to 
+
+A is followed by V, C, and i, all of which are pretty common
+H is followed by MGFZ, which (with the exception of F) are fairly uncommon, with M and G being very rare
+O is followed by QF, which are again common
+R is only followed by P - this is our most likely candidate for the sequence 'qu'
+
+
+
+Interesting things about this cipher:
+The frequencies of characters vary considerably. I'd expect to see more common letters mapping to
+multiple letters in the cipher alphabet, resulting in a more even distribution of characters in the
+cyphertext.
+
+I'm also intrigued by the fact that there are only 27 characters appearing in the cyphertext
+(28 if \n is included. As of the time of writing this, util.py does not track newlines. The lines in
+encrypted.txt are not of uniform length, but the ciphertext in the book is formatted in such a way that
+lines ARE of uniform length. Therefore, it's unclear to me whether to look at newlines). I'd expect most
+english letters to be present in the plaintext, and many english letters in the plain alphabet should be
+mapped to at least two letters in the cipher alphabet.
+
+Lastly, the existence of so many repeated letters is interesting. Again, many letters in the plain alphabet
+should be mapped to multiple letters in the cipher alphabet, so most (if not all) instances of double letters
+in the plaintext should be mapped to a string of two distinct letters in the cipher.

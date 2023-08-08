@@ -1,5 +1,3 @@
-import pprint
-
 count = {}
 file = open('Stage2/encrypted.txt', encoding='utf8')
 message = file.read()
