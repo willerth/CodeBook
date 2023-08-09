@@ -13,7 +13,7 @@ for filename in os.listdir(subcipherDirectory):
     messageLength += len(code)
 
 
-decryptedFile = open('decrypted.txt', 'w')
+decryptedFile = open('Stage4/decrypted.txt', 'w')
 
 for i in range(messageLength):
     arrIdx = i % 5
