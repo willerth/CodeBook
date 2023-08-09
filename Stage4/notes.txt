@@ -40,3 +40,15 @@ Setup's done, and now what's left is the act of decoding. I'll start by breaking
 frequency analysis leads me
 
 Breaking the message up into 5 submessages was easily done with split.py
+
+
+Wrote analysis.py to generate analysis.txt, which shows a frequency distribution of letters with each cipher
+
+Subcipher:	0	1	2	3	4
+A maps to:	S	C	U	B	A
+
+
+decypt.py was a straightforward script to write, cycling through the codes stored in the subciphers directory as well as
+an array representing the keyword SCUBA. The first letter of the first file was decrypted according to the first cipher
+alphabet, then the first letter of the second file according to the second alphabet, and so on and so forth until every
+letter of every file was written into decrypted.txt
