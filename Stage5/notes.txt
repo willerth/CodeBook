@@ -1,0 +1,29 @@
+BACKGROUND INFO
+A book cipher is a kind of homophonic cipher in which each letter in the plaintext
+message is mapped to a number. The key to the cipher is a large body of text, such
+as a book or other long document, such as the Declaration of Independence (as was
+used in the second Beale cipher). 
+
+The cipher maps each character of plaintext to a number. The number is determined by the
+book that serves as a key. If every word in the book is numbered starting from 1 (or maybe
+0, or maybe (if the cryptographer really wants to throw people off) some arbitrary starting
+number), then the character is encrypted as the number of any word in the text starting with
+the character.
+
+For example, if the key is the Declaration of Independence, which starts "1The 2unanimous
+3Declaration 4of 5the 6thirteen 7united 8States 9of 10America", the letter T could be encoded as
+1, 5, or 6, the letter U could be encoded as 2 or 7, etc.
+
+--
+
+08.18.2023
+This cipher is notoriously difficult, which makes sense - it'd be trivial to crack if
+I knew the key, but since there's a large number of possible bodies of text Singh could
+have used, I'd have to use trial and error to try deciphering the message
+
+Some obvious choices for a key would be Fermat's Enigma, the Declaration of Independence,
+or the King James Bible. I'll skip this cipher for now.
+
+First step to solve should be to create a function that, given a string of text, outputs
+a dictionary object that maps the integer i to the first letter of the i'th word of the
+text.
